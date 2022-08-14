@@ -31,3 +31,7 @@ Think of it AS A business owner I WANT to be able to view and manage the departm
 
   ## Questions
   If you have any questions about this repo, open an issue or contact me directly @mikegonz0.dev@gmail.com. You can find more of my work at [mike-gonz0] https://github.com/mike-gonz0/).
+  
+  ## Video
+  https://www.youtube.com/watch?v=5cAc6FZySVw
+![Screen Shot 2022-08-13 at 8 48 46 PM](https://user-images.githubusercontent.com/98365942/184517982-4a1f2e77-1f96-434c-8e76-bd61c03f286d.png)
