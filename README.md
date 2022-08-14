@@ -34,4 +34,8 @@ Think of it AS A business owner I WANT to be able to view and manage the departm
   
   ## Video
   https://www.youtube.com/watch?v=5cAc6FZySVw
+  
+  
+  ## Screenshots
+  
 ![Screen Shot 2022-08-13 at 8 48 46 PM](https://user-images.githubusercontent.com/98365942/184517982-4a1f2e77-1f96-434c-8e76-bd61c03f286d.png)
