@@ -23,31 +23,25 @@ function whatsUP() { // initiates prompt sequences starting w/ manager
         if (answers.choice === 'View all departments?') {
             viewDepartment();
             // whatsUP();
-        }
-        if (answers.choice === 'View all roles?') {
+        } else if (answers.choice === 'View all roles?') {
             viewRoles();
-        }
-        if (answers.choice === 'View all employees?') {
+        } else if (answers.choice === 'View all employees?') {
             console.log('View all employees');
             viewEmployees();
-        }
-        if (answers.choice === 'Add a department?') {
+        } else if (answers.choice === 'Add a department?') {
             console.log('Add a department');
             AddDepartment();
-        }
-        if (answers.choice === 'Add a role?') {
+        } else if (answers.choice === 'Add a role?') {
             console.log('Add a role');
             AddRole();
-        }
-        if (answers.choice === 'Add an employee?') {
+        } else if (answers.choice === 'Add an employee?') {
             console.log('Add an employee');
             AddEmployee();
-        }
-        if (answers.choice === 'Update an employee?') {
-            console.log('Update an employee');
+        } else if (answers.choice === 'Update an employee?') {
+            console.log('Update an employee')
             updateEmployee();
         }
-    })
+    });
 }
 whatsUP();
 
@@ -59,6 +53,7 @@ function viewDepartment(){
                 throw err;
             }
             console.table(results);
+            whatsNext();
         }
     );
 }
@@ -71,6 +66,7 @@ function viewRoles(){
                 throw err;
             }
             console.table(results);
+            whatsNext();
         }
     );
 }
@@ -83,6 +79,8 @@ function viewEmployees(){
                 throw err;
             }
             console.table(results);
+            whatsNext();
+
         }
     );
 }
@@ -106,9 +104,11 @@ function AddDepartment(){
                 throw err;
             }
             console.table(results);
+            whatsNext();
+
         }
     );
-    })
+    });
 }
 
 function AddRole(){
@@ -205,6 +205,8 @@ function AddEmployee(){
                 throw err;}
             // this is basically saying if there is no error tell me the results. 
             console.table(results);
+            whatsUP();
+
         }
     );
     })
@@ -260,10 +262,31 @@ function updateEmployee(){
                             throw err;}
                         // this is basically saying if there is no error tell me the results. 
                         console.table('Successfully updated');
-                        whatsUP();
+                        whatsNext();
                     }
                     )
             })
         });
     }
-    )}
+    )};
+
+
+
+    // create fucntion Start() =>{ Prompt asking what do you want to do... }
+function whatsNext() { // initiates prompt sequences starting w/ manager
+    inquirer.prompt({
+        type: 'list',
+        name: 'choice',
+        message: 'Would you like to do anything else?',
+        choices: ['No thanks I am done.', 'Yes please.']
+        
+    }).then((answers) => {
+        if (answers.choice === 'No thanks I am done.') {
+            
+            console.log('Thanks dude! When you grade this like Adele says, be easy on me. ');
+            return
+        } else if (answers.choice === 'Yes please.') {
+            whatsUP();
+        }
+    });
+}
