@@ -1,10 +1,7 @@
 # HW9 - README generator
   
   ## Description
-The idea here is to build a simple CMS, with a command-line UI. For those who don't know - content management systems (CMS),  are interfaces that allow non-developers to easily view and interact with information stored in databases. We will build the command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
-
-Think of it AS A business owner I WANT to be able to view and manage the departments, roles, and employees in my company
- SO THAT I can organize and plan my business
+This CMS allows business owners to view and manage departments, roles, and employees within their company database.
   ## Table of Contents
   
   * [Installation] (#install)
